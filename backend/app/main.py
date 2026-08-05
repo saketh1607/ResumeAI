@@ -11,7 +11,7 @@ from app.database import Base, engine
 from app.middleware.logging_middleware import LoggingMiddleware
 
 settings = get_settings()
-
+print("CORS:", settings.cors_origin_list)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
