@@ -55,8 +55,7 @@ class Settings(BaseSettings):
 
 
 
-    cors_origins: str = "http://localhost:5173,http://localhost:3000"
-
+    cors_origins: str = "http://localhost:5173,http://localhost:3000,https://resume-ai-frontend-red.vercel.app"
 
 
     upload_dir: str = "uploads"
