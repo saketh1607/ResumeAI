@@ -1,0 +1,28 @@
+# Render Blueprint — deploy from repo root
+# Dashboard: New > Blueprint > connect repo
+services:
+  - type: web
+    name: resume-analyzer-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python start.py
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GEMINI_MODEL
+        value: gemini-2.0-flash
+      - key: APP_ENV
+        value: production
+      - key: DATABASE_URL
+        value: sqlite+aiosqlite:///./resume_analyzer.db
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: EMBEDDING_MODEL
+        value: models/embedding-001
+      - key: CORS_ORIGINS
+        value: http://localhost:5173
