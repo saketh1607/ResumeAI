@@ -1,4 +1,6 @@
+import os
 import re
+import tempfile
 from functools import lru_cache
 from pathlib import Path
 
@@ -109,10 +111,13 @@ class Settings(BaseSettings):
     def upload_path(self) -> Path:
 
         path = self.base_path / self.upload_dir
-
-        path.mkdir(parents=True, exist_ok=True)
-
-        return path
+        try:
+            path.mkdir(parents=True, exist_ok=True)
+            return path
+        except OSError:
+            temp_path = Path(tempfile.gettempdir()) / self.upload_dir
+            temp_path.mkdir(parents=True, exist_ok=True)
+            return temp_path
 
 
 
