@@ -9,28 +9,30 @@ An enterprise-grade, AI-powered Resume Intelligence & Career Optimization Platfo
 ![Supabase](https://img.shields.io/badge/Vector_DB-Supabase_pgvector-3ECF8E?style=for-the-badge&logo=supabase)
 
 ---
+![alt text](image.png)
 
 ## 🌟 Key Features
 
 - 📄 **Resume PDF Parsing & Vector Indexing**  
   Upload PDF resumes with automated text extraction (via PyMuPDF). Parses contact details, experience, and skills, then chunks and generates vector embeddings stored in **Supabase pgvector**.
-
+![alt text](image-2.png)
 - 🎯 **Multi-Dimensional ATS Scoring Engine**  
   Evaluates resumes against industry benchmarks across 6 key metrics: *Skills Match*, *Keyword Relevance*, *Experience Alignment*, *Education Verification*, *Format & Structure*, and *Project Impact*. Generates strengths, weaknesses, missing keywords, and actionable recommendations.
-
+![alt text](image-3.png)
 - 💼 **Job Description Comparison & Role Fit**  
   Upload JD PDFs or paste raw text. Calculates exact semantic fit percentage, highlights matching competencies, identifies missing technologies, and builds a custom improvement roadmap.
-
+![alt text](image-4.png)
 - 💬 **RAG-Powered AI Career Chatbot**  
   Contextual, non-hallucinated career advisor powered by LangChain and Gemini 2.0. Retrieves relevant chunks from vector memory to answer candidate questions, rephrase bullet points, and offer resume advice.
-
+![alt text](image-5.png)
 - ⚡ **AI Interview Question Generator**  
   Generates 20 custom interview questions tailored to the candidate's resume and target JD across 4 distinct categories:
   - 👤 **HR & Behavioral**
   - 💻 **Technical Core**
   - 🔍 **Resume Deep-Dive**
   - 🚀 **Project Scenarios**
-
+![alt text](image-6.png)
+![alt text](image-7.png)
 - 📊 **Interactive Analytics Dashboard**  
   Visualizes score progression over time with **Chart.js** line graphs, animated **radial SVG score gauges**, top extracted skills clouds, and real-time gap alerts.
 
